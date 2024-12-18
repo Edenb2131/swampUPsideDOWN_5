@@ -48,7 +48,7 @@ jobs:
         PR_NUMBER: ${{ github.event.pull_request.number }}
         URL: ${{env.API_URL}}
         USER: ${{ secrets.USER }}
-        PW: ${{ secrets.USER_CRED }}
+        PW: ${{ secrets.USER_CRED }} 
       run: |
         PR="${{ github.event.pull_request.body }}"
         echo $PR | grep -oP '\(backport #\K\d+' | tail -n 1)
